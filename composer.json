@@ -1,0 +1,15 @@
+{
+    "name": "jakob/simple-slow-test-reporter",
+    "description": "Reports slow tests in your PHPUnit testsuite",
+    "require": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jakob Buis",
+            "email": "jakob@jakobbuis.nl"
+        }
+    ],
+    "minimum-stability": "stable"
+}
