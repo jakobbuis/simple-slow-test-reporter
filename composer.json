@@ -11,5 +11,10 @@
             "email": "jakob@jakobbuis.nl"
         }
     ],
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "SSTR\\": "src/"
+        }
+    }
 }
