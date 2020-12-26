@@ -24,7 +24,9 @@ limit in the extension:
     [...]
     <extensions>
         <extension class="SSTR\SlowTestReporter">
-            <integer>1000</integer>
+            <arguments>
+                <integer>1000</integer>
+            </arguments>
         </extension>
     </extensions>
 </phpunit>
