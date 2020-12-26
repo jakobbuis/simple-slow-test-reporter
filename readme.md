@@ -3,6 +3,9 @@
 
 [![Example output of slow test reporter, highlighting some slow testcases](example.png)](example.png)
 
+## Requirements
+Requires PHPUnit 9.0+
+
 ## Installation
 Add the reporter as a dev dependency:
 ```bash
