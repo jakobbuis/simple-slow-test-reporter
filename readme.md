@@ -1,6 +1,8 @@
 # Simple Slow Test Reporter
 > Reports slow tests in your PHPUnit testsuite
 
+[![Example output of slow test reporter, highlighting some slow testcases](example.png)](example.png)
+
 ## Installation
 Add the reporter as a dev dependency:
 ```bash
