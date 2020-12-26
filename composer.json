@@ -1,5 +1,5 @@
 {
-    "name": "jakob/simple-slow-test-reporter",
+    "name": "jakobbuis/simple-slow-test-reporter",
     "description": "Reports slow tests in your PHPUnit testsuite",
     "require": {
         "phpunit/phpunit": "^9.0"
