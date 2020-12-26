@@ -9,12 +9,12 @@ use PHPUnit\Runner\BeforeTestHook;
 class SlowTestReporter implements BeforeTestHook, AfterTestHook, AfterLastTestHook
 {
     private $testTimes;
+    private $threshold;
 
-    private const THRESHOLD_SLOW = 500;
-
-    public function __construct()
+    public function __construct(int $threshold = 500)
     {
         $this->testTimes = [];
+        $this->threshold = $threshold;
     }
 
     public function executeBeforeTest(string $test): void
@@ -31,7 +31,7 @@ class SlowTestReporter implements BeforeTestHook, AfterTestHook, AfterLastTestHo
     {
         // Filter to slow tests
         $this->testTimes = array_filter($this->testTimes, function ($time) {
-            return $time >= (self::THRESHOLD_SLOW / 1000);
+            return $time >= ($this->threshold / 1000);
         });
 
         if (count($this->testTimes) === 0) {
@@ -43,7 +43,7 @@ class SlowTestReporter implements BeforeTestHook, AfterTestHook, AfterLastTestHo
 
         // print slow test information
         echo "\x1b[33m"; // terminal yellow text
-        echo PHP_EOL . PHP_EOL . 'Slow tests (> ' . self::THRESHOLD_SLOW . ' msec): ' . PHP_EOL;
+        echo PHP_EOL . PHP_EOL . 'Slow tests (> ' . $this->threshold . ' msec): ' . PHP_EOL;
         foreach ($this->testTimes as $test => $time) {
             echo '  * ' . round($time, 2) . ' ' . $test . PHP_EOL;
         }
