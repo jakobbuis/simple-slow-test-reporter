@@ -4,7 +4,13 @@
 [![Example output of slow test reporter, highlighting some slow testcases](example.png)](example.png)
 
 ## Requirements
-Requires PHPUnit 9.0+
+Requires PHPUnit 9, 10 or 11. Use v1 for PHPUnit 9, and v2 for PHPUnit 10 and later. This extension does not support PHPUnit 8 and earlier versions.
+
+| PHPUnit version | SSTR version |
+| --- | --- |
+| 9.x | 1.x |
+| 10.x | 2.x |
+| 11.x | 2.x |
 
 ## Installation
 Add the reporter as a dev dependency:
@@ -59,9 +65,6 @@ Optionally, you can configure the threshold for a slow test. The default is 500 
     </extensions>
 </phpunit>
 ```
-
-### PHPUnit 8
-This extension does not support PHPUnit 8 and earlier versions.
 
 ## License
 MIT
