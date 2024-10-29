@@ -12,6 +12,30 @@ Add the reporter as a dev dependency:
 composer require --dev jakobbuis/simple-slow-test-reporter
 ```
 
+### PHPUnit 10-11
+Add the extension to your `phpunit.xml` file as a root-node:
+```xml
+<phpunit>
+    [...]
+    <extensions>
+        <bootstrap class="SSTR\SlowTestReporter" />
+    </extensions>
+</phpunit>
+```
+
+Optionally, you can configure the threshold for a slow test. The default is 500 milliseconds.
+```xml
+<phpunit>
+    [...]
+    <extensions>
+        <bootstrap class="SSTR\SlowTestReporter">
+            <parameter name="threshold" value="1000"/>
+        </bootstrap>
+    </extensions>
+</phpunit>
+```
+
+### PHPUnit 9
 Add the extension to your `phpunit.xml` file as a root-node:
 ```xml
 <phpunit>
@@ -22,8 +46,7 @@ Add the extension to your `phpunit.xml` file as a root-node:
 </phpunit>
 ```
 
-The default threshold for slow tests is 500 milliseconds. You can configure the
-limit in the extension:
+Optionally, you can configure the threshold for a slow test. The default is 500 milliseconds.
 ```xml
 <phpunit>
     [...]
