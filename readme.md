@@ -60,5 +60,8 @@ Optionally, you can configure the threshold for a slow test. The default is 500 
 </phpunit>
 ```
 
+### PHPUnit 8
+This extension does not support PHPUnit 8 and earlier versions.
+
 ## License
 MIT
