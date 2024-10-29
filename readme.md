@@ -13,12 +13,13 @@ Requires PHPUnit 9, 10 or 11. Use v1 for PHPUnit 9, and v2 for PHPUnit 10 and la
 | 11.x | 2.x |
 
 ## Installation
-Add the reporter as a dev dependency:
-```bash
-composer require --dev jakobbuis/simple-slow-test-reporter
-```
 
 ### PHPUnit 10-11
+Add the reporter as a dev dependency:
+```bash
+composer require --dev jakobbuis/simple-slow-test-reporter:"^2.0"
+```
+
 Add the extension to your `phpunit.xml` file as a root-node:
 ```xml
 <phpunit>
@@ -42,6 +43,11 @@ Optionally, you can configure the threshold for a slow test. The default is 500 
 ```
 
 ### PHPUnit 9
+Add the reporter as a dev dependency:
+```bash
+composer require --dev jakobbuis/simple-slow-test-reporter:"^1.0"
+```
+
 Add the extension to your `phpunit.xml` file as a root-node:
 ```xml
 <phpunit>
